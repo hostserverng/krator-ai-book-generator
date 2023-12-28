@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { multiStepContext } from "../../StepContext";
 import ImageCard from "../ImageCard";
 
-export default function ThirdStep() {
+export default function ConfirmationStep() {
     const {setCurrentStep, userData, setUserData} = useContext(multiStepContext);
 
     const images = [

@@ -28,7 +28,7 @@ export default function SecondStep() {
           }}
         />
         <button className="btn self-center w-1/4 bg-btn text-primary p-3 m-4 mt-16 rounded-lg"
-        onClick={()=>setCurrentStep(3)} >Next</button>
+        onClick={()=>setCurrentStep(3)} >Next Step</button>
       </div>
     </div>
     </div>

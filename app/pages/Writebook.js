@@ -10,6 +10,9 @@ import { multiStepContext } from "../StepContext";
 import FourthStep from "../components/createBook/FourthStep";
 import FifthStep from "../components/createBook/FifthStep";
 import SixthStep from "../components/createBook/SixthStep";
+import FourthStep3 from "../components/createBook/FourthStep3";
+import FourthStep2 from "../components/createBook/FourthStep2";
+
 
 const Writebook = () => {
   const headingText = [

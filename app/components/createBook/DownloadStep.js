@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { multiStepContext } from "../../StepContext";
 import ImageCard from "../ImageCard";
 
-export default function ThirdStep() {
+export default function DownloadStep() {
     const {setCurrentStep, userData, setUserData} = useContext(multiStepContext);
 
     const images = [
@@ -21,7 +21,7 @@ export default function ThirdStep() {
       ))}
     </div>
         <button className="btn self-center w-1/4 bg-btn text-primary p-3 m-4 mt-12 rounded-lg"
-        onClick={()=>setCurrentStep(4)} >Next Step</button>
+        onClick={()=>setCurrentStep(4)} >Download</button>
       </div>
     </div>
   );

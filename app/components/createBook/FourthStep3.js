@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { multiStepContext } from "../../StepContext";
 import ImageCard from "../ImageCard";
 
-export default function FourthStep() {
+export default function FourthStep3() {
   const { setCurrentStep, userData, setUserData } =
     useContext(multiStepContext);
   return (
@@ -11,14 +11,14 @@ export default function FourthStep() {
       <div className="flex flex-col mx-20 bg-white p-8 pl-12 rounded-lg ">
         <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-8">
           <div>
-            <div className="">
+            <div className="mb-5">
               <InputLabel className="text-black font-bold">
-                Author Name
+                Chapter Number
               </InputLabel>
               <TextField
-                value={userData["authorName"]}
+                value={userData["chapterNumber"]}
                 onChange={(e) =>
-                  setUserData({ ...userData, "authorName": e.target.value })
+                  setUserData({ ...userData, "chapterNumber": e.target.value })
                 }
                 placeholder="Hungarian"
                 className="bg-primary rounded-3xl w-full mt-1"
@@ -34,14 +34,14 @@ export default function FourthStep() {
                 }}
               />
             </div>
-            <div className="">
+            <div className="mb-5">
               <InputLabel className="text-black font-bold">
                 Page Number
               </InputLabel>
               <TextField
-                value={userData["pgNumber"]}
+                value={userData["pagNumber"]}
                 onChange={(e) =>
-                  setUserData({ ...userData, "pgNumber": e.target.value })
+                  setUserData({ ...userData, "pagNumber": e.target.value })
                 }
                 placeholder="Richard"
                 className="bg-primary rounded-3xl w-full mt-1"
@@ -57,16 +57,14 @@ export default function FourthStep() {
                 }}
               />
             </div>
-            <div className="">
+            <div className="mb-5">
               <InputLabel className="text-black font-bold">
-                Additional Info
+                Principle Text
               </InputLabel>
               <TextField
-                value={userData["additionalInfo"]}
-                multiline
-                rows={5}
+                value={userData["principleText"]}
                 onChange={(e) =>
-                  setUserData({ ...userData, "additionalInfo": e.target.value })
+                  setUserData({ ...userData, "principleText": e.target.value })
                 }
                 placeholder="Hungarian"
                 className="bg-primary rounded-3xl w-full mt-1"
@@ -75,13 +73,60 @@ export default function FourthStep() {
                   style: {
                     border: "none",
                     borderRadius: "15px",
-                    // height: "2.5rem",
+                    height: "2.5rem",
                     paddingBottom: "0.8rem",
                   },
                   disableUnderline: true,
                 }}
               />
             </div>
+            <div className="mb-5">
+              <InputLabel className="text-black font-bold">
+                Generate Image
+              </InputLabel>
+              <TextField
+                value={userData["generateImg"]}
+                onChange={(e) =>
+                  setUserData({ ...userData, "generateImg": e.target.value })
+                }
+                placeholder="Richard"
+                className="bg-primary rounded-3xl w-full mt-1"
+                variant="filled"
+                InputProps={{
+                  style: {
+                    border: "none",
+                    borderRadius: "15px",
+                    height: "2.5rem",
+                    paddingBottom: "0.8rem",
+                  },
+                  disableUnderline: true,
+                }}
+              />
+            </div>
+            <div className="mb-5">
+              <InputLabel className="text-black font-bold">
+                Generate Illustrations
+              </InputLabel>
+              <TextField
+                value={userData["generateIllustration"]}
+                onChange={(e) =>
+                  setUserData({ ...userData, "generateIllustration": e.target.value })
+                }
+                placeholder="Hungarian"
+                className="bg-primary rounded-3xl w-full mt-1"
+                variant="filled"
+                InputProps={{
+                  style: {
+                    border: "none",
+                    borderRadius: "15px",
+                    height: "2.5rem",
+                    paddingBottom: "0.8rem",
+                  },
+                  disableUnderline: true,
+                }}
+              />
+            </div>
+            
           </div>
           <div className="flex justify-end w-full">
             <img

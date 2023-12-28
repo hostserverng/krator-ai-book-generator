@@ -33,7 +33,7 @@ export default function FifthStep() {
          >Back Cover</button>
          </div>
         <button className="btn self-center w-1/4 bg-btn text-primary p-3 m-4 rounded-lg"
-        onClick={()=>setCurrentStep(6)} >Next</button>
+        onClick={()=>setCurrentStep(6)} >Next Step</button>
       </div>
     </div>
   );
