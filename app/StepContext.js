@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import Writebook from './pages/Writebook';
 import Designbook from './pages/Designbook';
+import CreateIllustration from './pages/CreateIllustration';
 
 export const multiStepContext = React.createContext();
 
@@ -22,7 +23,8 @@ const StepContext = () => {
     <div>
         <multiStepContext.Provider value={{currentStep, setCurrentStep, userData, setUserData, finalData, setFinalData, submitData}}>
             {/* <Writebook /> */}
-            <Designbook />
+            {/* <Designbook /> */}
+            <CreateIllustration />
         </multiStepContext.Provider>
     </div>
   )

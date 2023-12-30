@@ -28,7 +28,7 @@ const Designbook = () => {
     <div className="max-h-screen">
       <Navbar />
       <div className="bg-primary lg:h-lvh">
-        <Heading headingText={headingText[currentStep - 1]} />
+        <Heading headingText={headingText[currentStep - 1]} subHeading={currentStep==2?' ':null} />
         <div className="flex justify-center pb-4">
           
         </div>
