@@ -1,12 +1,12 @@
 import { InputLabel, TextField, Select, MenuItem } from "@mui/material";
 import React, { useContext, useState } from "react";
-import { multiStepContext } from "../../StepContext";
+import { multiStepContext } from "../StepContext";
 // import {  createMuiTheme } from '@mui/core/styles';
 
 export default function FirstPage() {
   const [illustration, setIllustration] = useState([]);
 
-  const { setCurrentStep, userData, setUserData } =
+  const { setCurrentIllustrationStep, userData, setUserData } =
     useContext(multiStepContext);
   return (
     <div>
@@ -122,7 +122,7 @@ export default function FirstPage() {
         </div>
         <button
           className="btn self-center w-1/4 bg-btn text-primary p-3 m-4 mt-16 rounded-lg"
-          onClick={() => setCurrentStep(2)}
+          onClick={() => setCurrentIllustrationStep(2)}
         >
           Next Step
         </button>

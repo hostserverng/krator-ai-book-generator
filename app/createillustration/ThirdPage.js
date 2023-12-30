@@ -8,13 +8,13 @@ import {
     Typography,
   } from "@mui/material";
   import React, { useContext, useState } from "react";
-  import { multiStepContext } from "../../StepContext";
-  import ImageCard from "../ImageCard";
+  import { multiStepContext } from "../StepContext";
+  import ImageCard from "../components/ImageCard";
   
   export default function ThirdPage() {
     
   
-    const { setCurrentStep, userData, setUserData } =
+    const { setCurrentIllustrationStep,submitData, userData, setUserData } =
       useContext(multiStepContext);
     return (
       <div>
@@ -33,8 +33,9 @@ import {
           </div>
           <div className="flex flex-row justify-center">
           <button className="btn self-center row w-1/6 bg-btn text-primary p-3 mt-6 rounded-lg"
-           >Save</button>
+           onClick={()=>submitData}>Save</button>
           <button className="btn self-center w-1/6 bg-btn text-primary p-3 mt-6 ml-4 rounded-lg"
+          onClick={()=>setCurrentIllustrationStep(1)}
            >Buy</button>
            </div>
         </div>

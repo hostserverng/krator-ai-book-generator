@@ -1,17 +1,19 @@
 "use client";
 import React, { useContext, useState } from "react";
 import Navbar from "../components/Navbar";
-import FirstStep from "../components/writeBook/FirstStep";
+import FirstStep from "./FirstStep";
 import Heading from "../components/Heading";
-import SecondStep from "../components/writeBook/SecondStep";
-import ThirdStep from "../components/writeBook/ThirdStep";
+import SecondStep from "./SecondStep";
+import ThirdStep from "./ThirdStep";
 import { Stepper, StepLabel, Step } from "@mui/material";
 import { multiStepContext } from "../StepContext";
-import FourthStep from "../components/writeBook/FourthStep";
-import FifthStep from "../components/writeBook/FifthStep";
-import SixthStep from "../components/writeBook/SixthStep";
-import FourthStep3 from "../components/writeBook/FourthStep3";
-import FourthStep2 from "../components/writeBook/FourthStep2";
+import FourthStep from "./FourthStep";
+import FifthStep from "./FifthStep";
+import SixthStep from "./SixthStep";
+import FourthStep3 from "./FourthStep3";
+import FourthStep2 from "./FourthStep2";
+import ConfirmationStep from "./ConfirmationStep";
+import DownloadStep from "./DownloadStep";
 
 
 const Writebook = () => {
@@ -32,7 +34,7 @@ const Writebook = () => {
     "Prompt for Cover Design",
     "Last Page Design",
   ];
-  const { currentStep, finalData } = useContext(multiStepContext);
+  const { currentWritingStep, finalData } = useContext(multiStepContext);
   function showStep(step) {
     switch (step) {
       case 1:
@@ -47,17 +49,21 @@ const Writebook = () => {
         return <FifthStep />;
       case 6:
         return <SixthStep />;
+      case 7:
+        return <ConfirmationStep />;
+      case 8:
+        return <DownloadStep />;
     }
   }
   return (
     <div className="max-h-screen">
       <Navbar />
       <div className="bg-primary lg:h-lvh">
-        <Heading headingText={headingText[currentStep - 1]} />
+        <Heading headingText={headingText[currentWritingStep - 1]} />
         <div className="flex justify-center pb-4">
           <Stepper
             style={{ width: "80%" }}
-            activeStep={currentStep - 1}
+            activeStep={currentWritingStep - 1}
             orientation="horizontal"
           >
             {stepLabels?.map((stepNumber,i) => (
@@ -81,6 +87,7 @@ const Writebook = () => {
                   "& .MuiStepLabel-root .Mui-active .MuiStepIcon-text": {
                     fill: "white", // circle's number (ACTIVE)
                   },
+                  
                 }}
               >
                 <StepLabel>{stepLabels[i]}</StepLabel>
@@ -89,7 +96,7 @@ const Writebook = () => {
 
           </Stepper>
         </div>
-        {showStep(currentStep)}
+        {showStep(currentWritingStep)}
       </div>
     </div>
   );

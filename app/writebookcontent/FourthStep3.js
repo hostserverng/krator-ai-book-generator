@@ -1,10 +1,10 @@
 import { InputLabel, TextField } from "@mui/material";
 import React, { useContext } from "react";
-import { multiStepContext } from "../../StepContext";
-import ImageCard from "../ImageCard";
+import { multiStepContext } from "../StepContext";
+import ImageCard from "../components/ImageCard";
 
 export default function FourthStep3() {
-  const { setCurrentStep, userData, setUserData } =
+  const { setCurrentWritingStep,setCurrentFourthSubStep, userData, setUserData } =
     useContext(multiStepContext);
   return (
     <div>
@@ -138,7 +138,7 @@ export default function FourthStep3() {
         </div>
         <button
           className="btn self-center w-1/4 bg-btn text-primary p-3 m-4 mt-16 rounded-lg"
-          onClick={() => setCurrentStep(5)}
+          onClick={() => {setCurrentWritingStep(5); setCurrentFourthSubStep(1);}}
         >
           Next Step
         </button>

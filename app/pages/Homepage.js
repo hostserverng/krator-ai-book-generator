@@ -7,7 +7,6 @@ const Homepage = () => {
     <div className='max-h-full'>
         <Navbar />
         <Getstarted />
-        
     </div>
   )
 }

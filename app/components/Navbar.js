@@ -18,22 +18,21 @@ const Navbar = () => {
                     </div>
                     <div className='hidden md:block'>
                         <div className='ml-4 flex items-center space-x-4'>
-                            <a href='/' className='text-black opacity-70 rounded-lg p-2'>
+                            <Link href='/' className='text-black opacity-70 rounded-lg p-2'>
                                 Home
-                            </a>
-                            <Link href="/writebook" className='text-black opacity-70 rounded-lg p-2'>
-                                Generate Book Cover
-                            
                             </Link>
-                            <a href='/' className='text-black opacity-70 rounded-lg p-2'>
+                            <Link href="/bookcoverdesign" className='text-black opacity-70 rounded-lg p-2'>
+                                Generate Book Cover
+                            </Link>
+                            <Link href='/createillustration' className='text-black opacity-70 rounded-lg p-2'>
                                 Generate Illustrations
-                            </a>
-                            <a href='/' className='text-black opacity-70 rounded-lg p-2'>
+                            </Link>
+                            <Link href='/writebookcontent' className='text-black opacity-70 rounded-lg p-2'>
                                 Generate Painting
-                            </a>
-                            <a href='/' className='text-black opacity-70 rounded-lg p-2'>
+                            </Link>
+                            <Link href='/' className='text-black opacity-70 rounded-lg p-2'>
                                 Contact
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div>

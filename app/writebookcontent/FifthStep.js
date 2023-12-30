@@ -1,9 +1,9 @@
 import { InputLabel, TextField } from "@mui/material";
 import React, { useContext } from "react";
-import { multiStepContext } from "../../StepContext";
+import { multiStepContext } from "../StepContext";
 
 export default function FifthStep() {
-    const {setCurrentStep, userData, setUserData} = useContext(multiStepContext);
+    const {setCurrentWritingStep, userData, setUserData} = useContext(multiStepContext);
   return (
     <div>
       <div className="flex flex-col mx-20 bg-white p-8 pl-12 rounded-lg">
@@ -33,7 +33,7 @@ export default function FifthStep() {
          >Back Cover</button>
          </div>
         <button className="btn self-center w-1/4 bg-btn text-primary p-3 m-4 rounded-lg"
-        onClick={()=>setCurrentStep(6)} >Next Step</button>
+        onClick={()=>setCurrentWritingStep(6)} >Next Step</button>
       </div>
     </div>
   );

@@ -1,10 +1,10 @@
 import { InputLabel } from "@mui/material";
 import React, { useContext } from "react";
-import { multiStepContext } from "../../StepContext";
-import ImageCard from "../ImageCard";
+import { multiStepContext } from "../StepContext";
+import ImageCard from "../components/ImageCard";
 
 export default function SecondPage() {
-  const { setCurrentStep, userData, setUserData } =
+  const { setCurrentIllustrationStep,submitData, userData, setUserData } =
     useContext(multiStepContext);
 
   const images = [
@@ -32,11 +32,12 @@ export default function SecondPage() {
           ))}
         </div>
         <div className="self-center flex flex-row justify-center w-full">
-          <button className="btn self-center row w-1/6 bg-btn text-primary p-3 mt-6 rounded-lg">
+          <button className="btn self-center row w-1/6 bg-btn text-primary p-3 mt-6 rounded-lg"
+          onClick={()=>submitData}>
             Save
           </button>
           <button className="btn self-center w-1/6 bg-btn text-primary p-3 ml-4 mt-6 rounded-lg"
-          onClick={() => setCurrentStep(3)}
+          onClick={() => setCurrentIllustrationStep(3)}
           >
             Buy
           </button>

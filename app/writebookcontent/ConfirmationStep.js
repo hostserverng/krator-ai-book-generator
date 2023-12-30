@@ -1,10 +1,10 @@
 
 import React, { useContext } from "react";
-import { multiStepContext } from "../../StepContext";
-import ImageCard from "../ImageCard";
+import { multiStepContext } from "../StepContext";
+import ImageCard from "../components/ImageCard";
 
-export default function DownloadStep() {
-    const {setCurrentStep, userData, setUserData} = useContext(multiStepContext);
+export default function ConfirmationStep() {
+    const {setCurrentWritingStep, userData, setUserData, submitData} = useContext(multiStepContext);
 
     const images = [
       { id: 1, src: '/images/building.jpg', alt: 'Image 1' },
@@ -21,7 +21,7 @@ export default function DownloadStep() {
       ))}
     </div>
         <button className="btn self-center w-1/4 bg-btn text-primary p-3 m-4 mt-12 rounded-lg"
-        onClick={()=>setCurrentStep(4)} >Download</button>
+        onClick={()=>{submitData; setCurrentWritingStep(8);}} >Next Step</button>
       </div>
     </div>
   );

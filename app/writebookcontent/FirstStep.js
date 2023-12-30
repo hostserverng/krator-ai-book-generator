@@ -1,6 +1,6 @@
 import { InputLabel, TextField } from "@mui/material";
 import React, { useContext, useState } from "react";
-import { multiStepContext } from "../../StepContext";
+import { multiStepContext } from "../StepContext";
 
 export default function FirstStep() {
   const [selectedFile1, setSelectedFile1] = useState(null);
@@ -24,7 +24,7 @@ export default function FirstStep() {
     }
   };
 
-  const { setCurrentStep, userData, setUserData } =
+  const { setCurrentWritingStep, userData, setUserData } =
     useContext(multiStepContext);
   return (
     <div>
@@ -226,7 +226,7 @@ export default function FirstStep() {
         </div>
         <button
           className="btn self-center w-1/4 bg-btn text-primary p-3 m-4 mt-16 rounded-lg"
-          onClick={() => setCurrentStep(2)}
+          onClick={() => setCurrentWritingStep(2)}
         >
           Next Step
         </button>

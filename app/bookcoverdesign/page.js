@@ -4,8 +4,8 @@ import Navbar from "../components/Navbar";
 
 import Heading from "../components/Heading";
 import { multiStepContext } from "../StepContext";
-import FirstPg from "../components/bookCoverDesign/FirstPg";
-import SecondPg from "../components/bookCoverDesign/SecondPg";
+import FirstPg from "./FirstPg";
+import SecondPg from "./SecondPg";
 
 
 const Designbook = () => {
@@ -15,7 +15,7 @@ const Designbook = () => {
   ];
 
   
-  const { currentStep, finalData } = useContext(multiStepContext);
+  const { currentDesignStep, finalData } = useContext(multiStepContext);
   function showStep(step) {
     switch (step) {
       case 1:
@@ -28,11 +28,11 @@ const Designbook = () => {
     <div className="max-h-screen">
       <Navbar />
       <div className="bg-primary lg:h-lvh">
-        <Heading headingText={headingText[currentStep - 1]} subHeading={currentStep==2?' ':null} />
+        <Heading headingText={headingText[currentDesignStep - 1]} subHeading={currentDesignStep==2?' ':null} />
         <div className="flex justify-center pb-4">
           
         </div>
-        {showStep(currentStep)}
+        {showStep(currentDesignStep)}
       </div>
     </div>
   );

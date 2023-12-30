@@ -4,9 +4,9 @@ import Navbar from "../components/Navbar";
 
 import Heading from "../components/Heading";
 import { multiStepContext } from "../StepContext";
-import FirstPage from "../components/createIllustration/FirstPage";
-import SecondPage from "../components/createIllustration/SecondPage";
-import ThirdPage from "../components/createIllustration/ThirdPage";
+import FirstPage from "./FirstPage";
+import SecondPage from "./SecondPage";
+import ThirdPage from "./ThirdPage";
 
 const CreateIllustration = () => {
   const headingText = [
@@ -15,7 +15,7 @@ const CreateIllustration = () => {
     "Preview of Illustrations",
   ];
 
-  const { currentStep, finalData } = useContext(multiStepContext);
+  const { currentIllustrationStep, finalData } = useContext(multiStepContext);
   function showStep(step) {
     switch (step) {
       case 1:
@@ -30,9 +30,9 @@ const CreateIllustration = () => {
     <div className="max-h-screen">
       <Navbar />
       <div className="bg-primary lg:h-lvh">
-        <Heading headingText={headingText[currentStep - 1]} subHeading={currentStep==2?' ':null}/>
+        <Heading headingText={headingText[currentIllustrationStep - 1]} subHeading={currentIllustrationStep==2?' ':null}/>
         <div className="flex justify-center pb-4"></div>
-        {showStep(currentStep)}
+        {showStep(currentIllustrationStep)}
       </div>
     </div>
   );

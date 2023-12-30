@@ -1,14 +1,14 @@
+
 import { InputLabel, TextField } from "@mui/material";
 import React, { useContext } from "react";
-import { multiStepContext } from "../../StepContext";
-import ImageCard from "../ImageCard";
+import { multiStepContext } from "../StepContext";
+import ImageCard from "../components/ImageCard";
 
-export default function FourthStep() {
-  const { setCurrentStep, userData, setUserData } =
+export default function FourthStep1() {
+    const { setCurrentFourthSubStep, userData, setUserData } =
     useContext(multiStepContext);
   return (
-    <div>
-      <div className="flex flex-col mx-20 bg-white p-8 pl-12 rounded-lg ">
+    <div className="flex flex-col mx-20 bg-white p-8 pl-12 rounded-lg ">
         <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-8">
           <div>
             <div className="">
@@ -93,11 +93,10 @@ export default function FourthStep() {
         </div>
         <button
           className="btn self-center w-1/4 bg-btn text-primary p-3 m-4 mt-16 rounded-lg"
-          onClick={() => setCurrentStep(5)}
+          onClick={() => setCurrentFourthSubStep(2)}
         >
           Next Step
         </button>
       </div>
-    </div>
-  );
+  )
 }

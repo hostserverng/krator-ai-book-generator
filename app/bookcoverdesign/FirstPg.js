@@ -5,7 +5,7 @@ import {
   MenuItem,
 } from "@mui/material";
 import React, { useContext, useState } from "react";
-import { multiStepContext } from "../../StepContext";
+import { multiStepContext } from "../StepContext";
 // import {  createMuiTheme } from '@mui/core/styles';
 
 export default function FirstPg() {
@@ -21,7 +21,7 @@ export default function FirstPg() {
     // Example: document.body.style.filter = `contrast(${newValue}%)`;
   };
 
-  const { setCurrentStep, userData, setUserData } =
+  const { setCurrentDesignStep, userData, setUserData } =
     useContext(multiStepContext);
   return (
     <div>
@@ -130,7 +130,7 @@ export default function FirstPg() {
         </div>
         <button
           className="btn self-center w-1/4 bg-btn text-primary p-3 m-4 mt-16 rounded-lg"
-          onClick={() => setCurrentStep(2)}
+          onClick={() => setCurrentDesignStep(2)}
         >
           Next Step
         </button>
