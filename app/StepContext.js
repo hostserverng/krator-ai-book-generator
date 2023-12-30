@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react'
 import Writebook from './pages/Writebook';
+import Designbook from './pages/Designbook';
 
 export const multiStepContext = React.createContext();
 
@@ -20,7 +21,8 @@ const StepContext = () => {
   return (
     <div>
         <multiStepContext.Provider value={{currentStep, setCurrentStep, userData, setUserData, finalData, setFinalData, submitData}}>
-            <Writebook />
+            {/* <Writebook /> */}
+            <Designbook />
         </multiStepContext.Provider>
     </div>
   )

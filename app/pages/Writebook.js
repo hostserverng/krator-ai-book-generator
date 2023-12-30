@@ -1,17 +1,17 @@
 "use client";
 import React, { useContext, useState } from "react";
 import Navbar from "../components/Navbar";
-import FirstStep from "../components/createBook/FirstStep";
+import FirstStep from "../components/writeBook/FirstStep";
 import Heading from "../components/Heading";
-import SecondStep from "../components/createBook/SecondStep";
-import ThirdStep from "../components/createBook/ThirdStep";
+import SecondStep from "../components/writeBook/SecondStep";
+import ThirdStep from "../components/writeBook/ThirdStep";
 import { Stepper, StepLabel, Step } from "@mui/material";
 import { multiStepContext } from "../StepContext";
-import FourthStep from "../components/createBook/FourthStep";
-import FifthStep from "../components/createBook/FifthStep";
-import SixthStep from "../components/createBook/SixthStep";
-import FourthStep3 from "../components/createBook/FourthStep3";
-import FourthStep2 from "../components/createBook/FourthStep2";
+import FourthStep from "../components/writeBook/FourthStep";
+import FifthStep from "../components/writeBook/FifthStep";
+import SixthStep from "../components/writeBook/SixthStep";
+import FourthStep3 from "../components/writeBook/FourthStep3";
+import FourthStep2 from "../components/writeBook/FourthStep2";
 
 
 const Writebook = () => {
