@@ -32,11 +32,11 @@ export default function SecondPage() {
           ))}
         </div>
         <div className="self-center flex flex-row justify-center w-full">
-          <button className="btn self-center row w-1/6 bg-btn text-primary p-3 mt-6 rounded-lg"
+          <button className="btn self-center row lg:w-1/6 md:w-1/2 bg-btn text-primary p-3 mt-6 rounded-lg"
           onClick={()=>submitData}>
             Save
           </button>
-          <button className="btn self-center w-1/6 bg-btn text-primary p-3 ml-4 mt-6 rounded-lg"
+          <button className="btn self-center lg:w-1/6 md:w-1/2 bg-btn text-primary p-3 ml-4 mt-6 rounded-lg"
           onClick={() => setCurrentIllustrationStep(3)}
           >
             Buy

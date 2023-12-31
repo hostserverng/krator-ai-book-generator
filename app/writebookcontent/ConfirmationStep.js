@@ -20,7 +20,7 @@ export default function ConfirmationStep() {
         <ImageCard key={image.id} src={image.src} alt={image.alt} />
       ))}
     </div>
-        <button className="btn self-center w-1/4 bg-btn text-primary p-3 m-4 mt-12 rounded-lg"
+        <button className="btn self-center lg:w-1/4 md:w-1/2 bg-btn text-primary p-3 m-4 mt-12 rounded-lg"
         onClick={()=>{submitData; setCurrentWritingStep(8);}} >Next Step</button>
       </div>
     </div>

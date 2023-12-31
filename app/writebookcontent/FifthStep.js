@@ -27,12 +27,12 @@ export default function FifthStep() {
           }}
         />
         <div className="flex flex-row justify-center">
-        <button className="btn self-center row w-1/12 bg-btn text-primary p-3 mt-6 rounded-lg"
+        <button className="btn self-center row md:w-1/4 lg:w-1/12 bg-btn text-primary p-3 mt-6 rounded-lg"
          >Front Cover</button>
-        <button className="btn self-center w-1/12 bg-btn text-primary p-3 mt-6 ml-4 rounded-lg"
+        <button className="btn self-center md:w-1/4 lg:w-1/12 bg-btn text-primary p-3 mt-6 ml-4 rounded-lg"
          >Back Cover</button>
          </div>
-        <button className="btn self-center w-1/4 bg-btn text-primary p-3 m-4 rounded-lg"
+        <button className="btn self-center lg:w-1/4 md:1/2 bg-btn text-primary p-3 m-4 rounded-lg"
         onClick={()=>setCurrentWritingStep(6)} >Next Step</button>
       </div>
     </div>

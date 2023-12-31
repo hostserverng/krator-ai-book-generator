@@ -141,10 +141,10 @@ export default function SecondPg() {
           </div>
         </div>
         <div className="flex flex-row justify-center">
-        <button className="btn self-center row w-1/6 bg-btn text-primary p-3 mt-6 rounded-lg"
+        <button className="btn self-center row lg:w-1/6 md:w-1/3 bg-btn text-primary p-3 mt-6 rounded-lg"
         onClick={()=>submitData}
          >Save</button>
-        <button className="btn self-center w-1/6 bg-btn text-primary p-3 mt-6 ml-4 rounded-lg"
+        <button className="btn self-center lg:w-1/6 md:w-1/3 bg-btn text-primary p-3 mt-6 ml-4 rounded-lg"
         onClick={()=>setCurrentDesignStep(1)}
          >Buy</button>
          </div>

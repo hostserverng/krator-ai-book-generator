@@ -11,7 +11,7 @@ export default function SixthStep() {
     <div>
       <div className="flex flex-col items-center mx-16 bg-white h-full pt-24 rounded-lg">
       <ImageCard key={1} src={'/images/building.jpg'} alt={'Image'} />
-        <button className="btn self-center w-1/4 bg-btn text-primary p-3 m-4 rounded-lg"
+        <button className="btn self-center lg:w-1/4 md:w-1/2 bg-btn text-primary p-3 m-4 rounded-lg"
         onClick={()=>setCurrentWritingStep(7)} >Next Step</button>
       </div>
     </div>

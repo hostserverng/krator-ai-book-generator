@@ -27,7 +27,7 @@ export default function SecondStep() {
             disableUnderline: true,
           }}
         />
-        <button className="btn self-center w-1/4 bg-btn text-primary p-3 m-4 mt-16 rounded-lg"
+        <button className="btn self-center lg:w-1/4 md:w-1/2 bg-btn text-primary p-3 m-4 mt-16 rounded-lg"
         onClick={()=>setCurrentWritingStep(3)} >Next Step</button>
       </div>
     </div>

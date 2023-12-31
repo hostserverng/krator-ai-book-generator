@@ -17,7 +17,7 @@ const Getstarted = () => {
       </div>
       <div className="pb-4">Click below to get started</div>
       <Link
-        className="bg-btn-blue w-1/4 h-24 rounded-lg pl-8 text-black"
+        className="bg-btn-blue lg:w-1/4 md:w-1/3 sm:w-full h-24 rounded-lg pl-8 text-black"
         href="/writebookcontent"
       >
         <div className="flex flex-col h-full justify-center">
@@ -33,7 +33,7 @@ const Getstarted = () => {
         </div>
       </Link>
       <Link
-        className="bg-btn-green w-1/4 h-24 rounded-lg pl-8 text-black"
+        className="bg-btn-green lg:w-1/4 md:w-1/3 sm:w-full h-24 rounded-lg pl-8 text-black"
         href="/bookcoverdesign"
       >
         <div className="flex flex-col h-full justify-center">
@@ -50,7 +50,7 @@ const Getstarted = () => {
       </Link>
 
       <Link
-        className="bg-btn-purple w-1/4 h-24 rounded-lg pl-8 text-black"
+        className="bg-btn-purple lg:w-1/4 md:w-1/3 sm:w-full h-24 rounded-lg pl-8 text-black"
         href="/createillustration"
       >
         <div className="flex flex-col h-full justify-center">

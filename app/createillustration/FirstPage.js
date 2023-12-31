@@ -35,7 +35,7 @@ export default function FirstPage() {
                 }}
               />
           </div>
-          <div className="col-span-2 grid grid-cols-3 gap-4">
+          <div className="lg:col-span-2 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
             <div className="">
               <InputLabel className="text-black font-bold">
                 Select illustration Type 1
@@ -121,7 +121,7 @@ export default function FirstPage() {
           </div>
         </div>
         <button
-          className="btn self-center w-1/4 bg-btn text-primary p-3 m-4 mt-16 rounded-lg"
+          className="btn self-center lg:w-1/4 md:w-1/2 bg-btn text-primary p-3 m-4 mt-16 rounded-lg"
           onClick={() => setCurrentIllustrationStep(2)}
         >
           Next Step

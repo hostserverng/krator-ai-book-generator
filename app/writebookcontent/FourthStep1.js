@@ -92,7 +92,7 @@ export default function FourthStep1() {
           </div>
         </div>
         <button
-          className="btn self-center w-1/4 bg-btn text-primary p-3 m-4 mt-16 rounded-lg"
+          className="btn self-center lg:w-1/4 md:w-1/2 bg-btn text-primary p-3 m-4 mt-16 rounded-lg"
           onClick={() => setCurrentFourthSubStep(2)}
         >
           Next Step
