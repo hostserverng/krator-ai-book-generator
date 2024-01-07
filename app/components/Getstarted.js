@@ -2,14 +2,21 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
+import { getUserSession } from '@/session'
 
-const Getstarted = () => {
+const Getstarted = async() => {
   const router = useRouter();
+  const user = await getUserSession();
+  var name = 'Richard';
+
+  if(user){
+    name = user.name;
+  }
 
   return (
     <div className="bg-primary max-w-full h-screen max-h-full flex flex-col justify-start items-center py-20 space-y-6">
       <h4 className="font-bold text-3xl">
-        🎉Hi Richard, what exactly do you have in mind?
+        🎉Hi {name}, what exactly do you have in mind?
       </h4>
       <div className="text-center">
         Generate Book Designs, Book Covers & Illustrations with

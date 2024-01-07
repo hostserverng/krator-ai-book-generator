@@ -1,12 +1,17 @@
 "use client";
 import Link from 'next/link';
 import { useState } from 'react';
+import {signIn} from "next-auth/react"
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleSignIn = async () => {
+    await signIn("google");
   };
 
   return (
@@ -62,7 +67,8 @@ const Navbar = () => {
           </div>
           {/* Responsive login/signup button */}
           <div className="">
-            <button className="w-32 h-12 bg-btn text-primary text-sm rounded-lg">
+            <button className="w-32 h-12 bg-btn text-primary text-sm rounded-lg"
+            onClick={handleSignIn}>
               Login/Signup
             </button>
           </div>
