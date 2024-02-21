@@ -28,4 +28,8 @@ const authOption = {
 };
 
 const handler = NextAuth(authOption);
+
+// Add the following line for Edge Runtime configuration
+export const runtime = 'edge';
+
 export { handler as GET, handler as POST };
