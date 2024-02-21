@@ -1,12 +1,11 @@
 "use client";
 import React, { useContext, useState } from "react";
 import Navbar from "../components/Navbar";
-
 import Heading from "../components/Heading";
 import { multiStepContext } from "../StepContext";
 import FirstPg from "./FirstPg";
 import SecondPg from "./SecondPg";
-
+export const runtime = 'edge';
 
 const Designbook = () => {
   const headingText = [
