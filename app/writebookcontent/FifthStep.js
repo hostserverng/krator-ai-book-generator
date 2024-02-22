@@ -6,9 +6,9 @@ import axios from "axios";
 export default function FifthStep() {
   const { setCurrentWritingStep, userData, setUserData } =
     useContext(multiStepContext);
-  const [generatedImage, setGeneratedImage] = useState("");
 
-  const handleGenerateImage = async () => {
+
+  const handleBackGenerateImage = async () => {
     try {
       // Make a POST request to the backend API
 
@@ -18,11 +18,11 @@ export default function FifthStep() {
       // console.log(prompt)
       const response = await axios.post(
         "http://localhost:3000/api/generate-image",
-        { prompt: "Provide a back cover design for a book. Please only provide the cropped portion of the backcover. The details of the book are provided" + userData["back-cover-prompt"] }
+        { prompt: "Create an image for a book cover design for the following subject: " + userData["cover-prompt"] }
       );
 
       // Update state with the generated image URL
-      setGeneratedImage(response.data.data[0].url);
+
       console.log(response.data.data[0].url);
       setUserData({ ...userData, "back-cover-image": response.data.data[0].url });
       // console.log(userData["book-cover-image"]);
@@ -30,6 +30,29 @@ export default function FifthStep() {
       console.error("Error generating image:", error);
     }
   };
+
+  const handleFrontGenerateImage = async () => {
+    try {
+      // Make a POST request to the backend API
+
+      // console.log(userData["back-cover-prompt"]);
+
+      // const prompt = JSON.stringify("prompt":selectedPrompt1)
+      // console.log(prompt)
+      const response = await axios.post(
+        "http://localhost:3000/api/generate-image",
+        { prompt: "Create an image for a book cover design for the following subject: " + userData["cover-prompt"] }
+      );
+
+      // Update state with the generated image URL
+      console.log(response.data.data[0].url);
+      setUserData({ ...userData, "front-cover-image": response.data.data[0].url });
+      // console.log(userData["book-cover-image"]);
+    } catch (error) {
+      console.error("Error generating image:", error);
+    }
+  };
+
   return (
     <div>
       <div className="flex flex-col mx-20 bg-white p-8 pl-12 rounded-lg">
@@ -37,9 +60,9 @@ export default function FifthStep() {
           Write Prompt for Generation Cover
         </InputLabel>
         <TextField
-          value={userData["back-cover-prompt"]}
+          value={userData["cover-prompt"]}
           onChange={(e) =>
-            setUserData({ ...userData, "back-cover-prompt": e.target.value })
+            setUserData({ ...userData, "cover-prompt": e.target.value })
           }
           multiline
           rows={10}
@@ -55,12 +78,15 @@ export default function FifthStep() {
           }}
         />
         <div className="flex flex-row justify-center">
-          <button className="btn self-center row md:w-1/4 lg:w-1/12 bg-btn text-primary p-3 mt-6 rounded-lg">
+          <button
+          type="submit"
+            onClick={handleFrontGenerateImage}
+           className="btn self-center row md:w-1/4 lg:w-1/12 bg-btn text-primary p-3 mt-6 rounded-lg">
             Front Cover
           </button>
           <button
             type="submit"
-            onClick={handleGenerateImage}
+            onClick={handleBackGenerateImage}
             className="btn self-center md:w-1/4 lg:w-1/12 bg-btn text-primary p-3 mt-6 ml-4 rounded-lg"
           >
             Back Cover
