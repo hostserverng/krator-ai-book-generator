@@ -16,22 +16,10 @@ export default function SecondPg() {
   const [selectedFile2, setSelectedFile2] = useState(null);
   const [selectedFile3, setSelectedFile3] = useState(null);
 
-  const handleFileChange = (event, fileNumber) => {
-    const file = event.target.files[0];
-    switch (fileNumber) {
-      case 1:
-        setSelectedFile1(file);
-        break;
-      case 2:
-        setSelectedFile2(file);
-        break;
-      case 3:
-        setSelectedFile3(file);
-        break;
-      default:
-        break;
-    }
-  };
+
+  const [generatedImage, setGeneratedImage] = useState('');
+
+
 
   const { setCurrentDesignStep, userData, setUserData } =
     useContext(multiStepContext);

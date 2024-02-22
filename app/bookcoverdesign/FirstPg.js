@@ -9,16 +9,14 @@ import { multiStepContext } from "../StepContext";
 // import {  createMuiTheme } from '@mui/core/styles';
 
 export default function FirstPg() {
-  const [selectedFile1, setSelectedFile1] = useState(null);
-  const [selectedFile2, setSelectedFile2] = useState(null);
-  const [selectedFile3, setSelectedFile3] = useState(null);
+  // const [selectedFile1, setSelectedFile1] = useState(null);
+  // const [selectedFile2, setSelectedFile2] = useState(null);
+  // const [selectedFile3, setSelectedFile3] = useState(null);
 
   const [contrast, setContrast] = useState(100);
 
   const handleContrastChange = (event, newValue) => {
     setContrast(newValue);
-    // You can apply the contrast dynamically to your UI elements here
-    // Example: document.body.style.filter = `contrast(${newValue}%)`;
   };
 
   const { setCurrentDesignStep, userData, setUserData } =
