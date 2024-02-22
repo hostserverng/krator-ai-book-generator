@@ -1,3 +1,4 @@
+// pages/api/auth/[...nextauth].js
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
@@ -28,4 +29,8 @@ const authOption = {
 };
 
 const handler = NextAuth(authOption);
+
+// Add the following line for Edge Runtime configuration
+export const runtime = 'edge';
+
 export { handler as GET, handler as POST };
