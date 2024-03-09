@@ -1,9 +1,23 @@
-import { InputLabel, TextField } from "@mui/material";
-import React, { useContext } from "react";
+import { FormHelperText, InputLabel, TextField } from "@mui/material";
+import React, { useContext, useState } from "react";
 import { multiStepContext } from "../StepContext";
 
 export default function SecondStep() {
     const {setCurrentWritingStep, userData, setUserData} = useContext(multiStepContext);
+    const [aboutDescriptionError, setAboutDescriptionError] = useState(false);
+
+    const handleNextStep = () => {
+      let hasError = false;
+  
+      if (!userData["aboutDescription"]) {
+        setAboutDescriptionError(true);
+        hasError = true;
+      }
+      else{
+        setAboutDescriptionError(false);
+        setCurrentWritingStep(3);
+      }
+    }
   return (
     <div>
     <div className="center">
@@ -13,7 +27,9 @@ export default function SecondStep() {
         </InputLabel>
         <TextField
         value={userData['aboutDescription']}
-        onChange={(e)=>setUserData({...userData, 'aboutDescription':e.target.value})}
+        onChange={(e)=>{setUserData({...userData, 'aboutDescription':e.target.value})
+        setAboutDescriptionError(false);
+        }}
           multiline
           rows={10}
           placeholder="Description"
@@ -27,8 +43,11 @@ export default function SecondStep() {
             disableUnderline: true,
           }}
         />
+                    {aboutDescriptionError && (
+              <FormHelperText error>Please enter Book Description.</FormHelperText>
+            )}
         <button className="btn self-center lg:w-1/4 md:w-1/2 bg-btn text-primary p-3 m-4 mt-16 rounded-lg"
-        onClick={()=>setCurrentWritingStep(3)} >Next Step</button>
+        onClick={handleNextStep} >Next Step</button>
       </div>
     </div>
     </div>
