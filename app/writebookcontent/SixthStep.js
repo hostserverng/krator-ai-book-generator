@@ -24,7 +24,7 @@ export default function SixthStep() {
             <button
                 className="btn self-center lg:w-1/4 md:w-1/2 bg-btn text-primary p-3 m-4 rounded-lg"
                 onClick={() => setCurrentWritingStep(7)}
-                disabled={!imageLoaded} // Disable button until the image is loaded
+                // disabled={!imageLoaded} // Disable button until the image is loaded
             >
                 Next Step
             </button>
